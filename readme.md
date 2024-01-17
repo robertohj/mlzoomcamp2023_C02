@@ -24,7 +24,11 @@ The prediction of the class will use a CNN based on EfficientNetB3 with fine tun
 4.1 Loading the model  
 4.2 Getting predictions  
 4.3 Testing on completely random, difficult imgages  
-5. Conclusion
+5. Serving the model
+5.1 Serving locally (flask and waitress)
+5.2 Containerizing (docker)
+5.3 Publishing to the Cloud (Azure)
+5.4 Serving from an App (Streamlit)
 
 
 ### Dataset  
@@ -32,7 +36,7 @@ The dataset was obtained from Kaggle and can be found here:
 https://www.kaggle.com/datasets/iamsouravbanerjee/animal-image-dataset-90-different-animals/data  
 
 The dataset contains 5400 Animal Images in 90 different categories obtained from Wikipedia.  
-
+NOTE: The dataset is around 600MB, so it was not included in this repo, but it can be downloaded from that link.   
 The most obvious way to apply the dataset is in multiclass classification of animals, though there are many different approaches to achieve this, most of them using transfer learning. One basic difference is the base pretrained model to extend from, such as Xception (used in the course), or EfficientNetBx (used in this project).
 
 For reference, although Xception is a good Deep Learning architecture, [EfficientNet](https://pypi.org/project/efficientnet/) has become the go-to architecture for many challenging tasks, particularly in object recognition applications.  
