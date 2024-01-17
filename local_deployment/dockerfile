@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY ["requirements.txt", "./"]
+#RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# python version (32 or 64)
+#RUN python -c "import sys; print(sys.maxsize > 2**32)"
+
+#COPY ["predict.py", "./"]
+COPY ["predict_tflite_test.py", "./"]
+COPY ["predict_tflite_flask.py", "./"]
+#COPY ["EfficientNetB3_large_07_0.927.keras", "./"]
+COPY ["EfficientNetB3_large_07_0.927.tflite", "./"]
+COPY ["encoded_classes.pkl", "./"]
+
+COPY ["img", "./img"]
+
+# Expose the port to serve
+EXPOSE 9696
+# Serve from flask, from this container
+ENTRYPOINT [ "waitress-serve", "--listen=0.0.0.0:9696", "predict_tflite_flask:app" ]

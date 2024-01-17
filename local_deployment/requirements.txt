@@ -1,0 +1,10 @@
+#for Windows, it must be tflite from the full tensorflow
+tensorflow==2.15.0
+pillow==10.2.0
+flask==3.0.0
+waitress==2.1.2
+
+# for linux-based devices, it can be tflite-runtime:
+#https://www.tensorflow.org/lite/guide/python
+# pip install tflite-runtime
+#tflite-runtime
