@@ -1,5 +1,6 @@
 # **Animal classification  - ML Zoomcamp Capstone 1**
-This project resulted in a streamlit application that can be accessed following in  https://animalprediction.streamlit.app/  NOTE: the first time the model is run from the cloud it may take some time while the virtual hardware is provisioned.
+This project resulted in a streamlit application that can be accessed following in  **https://animalprediction.streamlit.app/**   This app uses a deep learning model to classify animals; the model is serving from the cloud in Azure.
+NOTE: the first time the app is run from the cloud it may take some time while the virtual hardware is provisioned.
 
 ## Problem description
 In this project, we will use Convolutional Neural Networks to classify animals in JPEG images.  
